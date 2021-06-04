@@ -1,0 +1,52 @@
+{ 
+    "comparations": [
+      {
+        "id": 1,
+        "name": "arroz",
+        "date": "",
+        "items": [
+            {
+                "id": 1,
+                "name": "arroz",
+                "price": 8,
+                "measurement": "kg",
+                "quantity": 1,
+                "units": 5
+            },
+            {
+                "id": 1,
+                "name": "arroz",
+                "price": 8,
+                "measurement": "kg",
+                "quantity": 1,
+                "units": 5
+            },
+            {
+                "id": 1,
+                "name": "arroz",
+                "price": 8,
+                "measurement": "kg",
+                "quantity": 1,
+                "units": 5
+            },
+            {
+                "id": 1,
+                "name": "arroz",
+                "price": 8,
+                "measurement": "kg",
+                "quantity": 1,
+                "units": 5
+            },
+            {
+                "id": 1,
+                "name": "arroz",
+                "price": 8,
+                "measurement": "kg",
+                "quantity": 1,
+                "units": 5
+            }
+        ]
+    }
+]
+  }
+  

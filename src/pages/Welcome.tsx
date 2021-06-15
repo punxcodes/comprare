@@ -29,7 +29,7 @@ export function Welcome() {
                 nas suas compras
             </Text>
             <View style={styles.buttonAlign}>
-                <LightGreenButton title={"COMEÇAR"} 
+                <LightGreenButton title={"começar"} 
                                   iconName={"chevron-right"} 
                                   onPress={handleStart}
                                   />

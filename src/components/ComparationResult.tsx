@@ -1,14 +1,3 @@
-<View>
-    <Text>
-        Nome da comparação 1
-</Text>
-    <View>
-
-    </View>
-</View>
-
-
-
 import React, { useState } from 'react';
 import {
     StyleSheet,
@@ -23,18 +12,13 @@ import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
 
 interface ComparationResultProps extends TouchableOpacityProps {
+    id: string;
     title: string;
     bestItem: string;
     economy: string; 
 }
 
-export function ComparationResult({ title, bestItem, economy, ...rest }: ComparationResultProps) {
-    // const [showIconElement, setShowIconElement] = useState(!!iconName);
-    const navigation = useNavigation();
-    function createComparation(){
-        navigation.navigate('Welcome');
-    }
-    return (
+export function ComparationResult({ id,title, bestItem, economy, ...rest }: ComparationResultProps) {    return (
         <TouchableOpacity
             style={styles.container}
             activeOpacity={0.8}
@@ -48,7 +32,7 @@ export function ComparationResult({ title, bestItem, economy, ...rest }: Compara
                     <FontAwesome 
                         name='star'
                         color='gold'
-                        size={24}
+                        size={22}
                     />
                     <Text style={styles.itemName}>
                         {bestItem}
@@ -82,24 +66,20 @@ const styles = StyleSheet.create({
         width: '100%',
         paddingHorizontal: 20,
         marginBottom: 15,
-
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
             height: 2,
         },
         shadowOpacity: 0.25,
-        // shadowRadius: 3.84,
         shadowRadius: 10,
         elevation: 5,
     },
     namesBox:{
         flexDirection: 'column',
-        width: '65%',
+        width: '60%',
         height: '100%',
-        justifyContent: 'center',
-        // borderColor: 'black',
-        // borderWidth: 1
+        justifyContent: 'center'
     },
     comparationName: {
         color: colors.dark_text,
@@ -115,32 +95,27 @@ const styles = StyleSheet.create({
         color: colors.dark_text,
         fontFamily: fonts.text,
         fontSize: 16,
-        marginLeft: 10
+        marginLeft: 6
     },
     line: {
         height: '80%',
         width: 1,
-        borderColor: colors.dark_text,
+        borderColor: colors.dark_grey,
         borderRightWidth: 1,
         borderStyle: 'dashed',
-        // marginRight: 10
     },
     economyBox: {
-        justifyContent: 'center',
-        // borderColor: 'black',
-        // borderWidth: 1
+        justifyContent: 'center'
     },
     economyText: {
         color: colors.green,
-        fontFamily: fonts.text,
         fontSize: 16,
-        fontWeight: 'bold',
+        fontFamily: fonts.heading
     },
     economyValue: {
         color: colors.dark_text,
-        fontFamily: fonts.text,
         fontSize: 16,
-        fontWeight: 'bold',
+        fontFamily: fonts.heading
     }
 
 })

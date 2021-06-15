@@ -46,9 +46,8 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: colors.green,
-        fontSize: 18,
-        fontWeight: 'bold',
-        fontFamily: fonts.text
+        fontSize: 22,
+        fontFamily: fonts.heading
     },
     buttonIcon:{
         color: colors.green,

@@ -17,10 +17,10 @@ const AppRoutes: React.FC = () => (
                 backgroundColor: colors.background
             }
         }}>
-        {/* <stackRoutes.Screen
+        <stackRoutes.Screen
             name="Welcome"
-            component={Welcome}
-        /> */}
+            component={NewComparation}
+        />
 
         <stackRoutes.Screen
             name="ComparationHistory"
@@ -32,15 +32,10 @@ const AppRoutes: React.FC = () => (
             component={NewComparation}
         />
 
-        {/* <stackRoutes.Screen
+        <stackRoutes.Screen
             name="UserIdentification"
             component={UserIdentification}
-        /> */}
-
-        {/* <stackRoutes.Screen
-            name="Confirmation"
-            component={Confirmation}
-        /> */}
+        />
     </stackRoutes.Navigator>
 )
 

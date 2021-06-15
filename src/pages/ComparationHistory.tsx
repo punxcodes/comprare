@@ -19,29 +19,76 @@ import fonts from '../styles/fonts';
 
 export function ComparationHistory() {
     const navigation = useNavigation();
-    function createComparation(){
-        navigation.navigate('Welcome');
+    function createComparation() {
+        navigation.navigate('NewComparation');
     }
+
+    const DATA = [
+        {
+            id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+            title: "Arroz 2 Kg com 5 Kg",
+            bestItem: "Arroz 5kg",
+            economy: "R$ 2,00"
+        },
+        {
+            id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28er",
+            title: "Garrafa agua 5 L com 500 mL",
+            bestItem: "Garrafa 5L",
+            economy: "R$ 6,00"
+        },
+        {
+            id: "bd7acbea-c1b1-46c2-aed5-3ad53abb27ba",
+            title: "Mussarela fatiada vs peça",
+            bestItem: "Peça",
+            economy: "R$ 0,90"
+        },
+        {
+            id: "bd7acbea-c1b1-46c2-aed5-3ad53abb18ba",
+            title: "Arroz 2 Kg com 5 Kg",
+            bestItem: "1 Arroz 5kg",
+            economy: "R$ 0,90"
+        },
+        {
+            id: "bd7acbea-c1b1-46c2-aed5-4ad53abb28ba",
+            title: "Garrafa agua 5 L com 500 mL",
+            bestItem: "Garrafa 5L",
+            economy: "R$ 6,00"
+        },
+        {
+            id: "bd7acbea-c1b1-56c2-aed5-3ad53abb28ba",
+            title: "Mussarela fatiada vs peça",
+            bestItem: "Peça",
+            economy: "R$ 0,80"
+        }
+    ];
+
     return (
         <SafeAreaView style={styles.container}>
             <TouchableOpacity style={styles.button} onPress={createComparation}>
                 <Text style={styles.buttonText}>
                     Nova Comparação
                 </Text>
-                <FontAwesome name="plus" style={styles.buttonIcon}/>
+                <FontAwesome name="plus" style={styles.buttonIcon} />
             </TouchableOpacity>
-
+            <View style={styles.separator}>
+                <FontAwesome name="clock-o" style={styles.iconSeparator} />
+                <Text style={styles.textSeparator}>Últimas comparações</Text>
+            </View>
+            <View style={styles.line} />
             <FlatList
-                data={[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]}
-                renderItem={( {item} ) =>
+                data={DATA}
+                keyExtractor={(item) => String(item.id)}
+                renderItem={({ item }) =>
                     <ComparationResult
-                        title={'Arroz'}
-                        bestItem={'Sepé'}
-                        economy={'R$ 2,00'}
+                        id={item.id}
+                        title={item.title}
+                        bestItem={item.bestItem}
+                        economy={item.economy}
                     />
                 }
                 style={styles.comparationList}
-            />             
+                showsVerticalScrollIndicator={false}
+            />
         </SafeAreaView>
     )
 }
@@ -52,10 +99,32 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        // justifyContent: 'center',
         alignItems: 'center',
         paddingTop: 60,
         paddingHorizontal: '5%'
+    },
+    separator: {
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        flexDirection: 'row',
+        width: '100%',
+        marginBottom: 10
+    },
+    textSeparator: {
+        color: colors.dark_text,
+        fontFamily: fonts.text,
+        marginTop: 4
+    },
+    iconSeparator: {
+        fontSize: 22,
+        color: colors.dark_text,
+        marginHorizontal: 8
+    },
+    line: {
+        width: '100%',
+        borderColor: colors.dark_grey,
+        borderBottomWidth: 1,
+        marginBottom: 20
     },
     button: {
         paddingVertical: 20,

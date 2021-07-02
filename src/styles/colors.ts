@@ -5,5 +5,6 @@ export default {
     dark_grey: '#C4C4C4',
     dark_text: '#262626',
     light_text: '#FFFFFF',
-    background: '#FFFFFF'
+    background: '#FFFFFF',
+    medium_grey: '#C4C4C4'
 }

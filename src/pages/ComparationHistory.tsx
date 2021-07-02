@@ -9,9 +9,9 @@ import {
     SafeAreaView,
     Dimensions,
     FlatList,
-    Button
+    Button,
+    TouchableOpacity
 } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { ComparationResult } from '../components/ComparationResult';
 
 import colors from '../styles/colors';
